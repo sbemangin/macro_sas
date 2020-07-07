@@ -1,4 +1,5 @@
 
+%global test_print_version;
 %let test_print_version = 3;
 
 %macro test_print;
