@@ -2,7 +2,7 @@
 
 %let dir_path = C:\Users\D_CHALTIEL\Documents\GitHub\macro_sas\example;
 
-%include "&dir_path\loadSBE.sas";
+%include "&dir_path\load_SBE.sas";
 
 /*Paramètre principal : 
 	dir_path = le dossier de travail 
