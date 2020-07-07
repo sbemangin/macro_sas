@@ -1,6 +1,6 @@
 
 %global git_macro_version git_macro_version_date;
-%let git_macro_version = 0.1.1;
+%let git_macro_version = 0.1.2;
 %let git_macro_version_date = 07/07/2020;
 
 %if %symexist(dir_path) %then %do; %end; 
