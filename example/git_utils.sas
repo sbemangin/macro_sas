@@ -2,10 +2,10 @@
 /*
 * Macro de chargement du git, à importer manuellement
 */
-%macro load_SBE(dir_path /* chemin (absolu) vers l'espace de travail local */, 
-				git_url=https://github.com/DanChaltiel/macro_sas.git /* repository git à charger */, 
-				version=master /*version: release, tag, branch ou hash*/,
-				local_folder=git_macro /* nom du dossier à créer pour contenir le clone*/);
+%macro install_git(dir_path /* chemin (absolu) vers l'espace de travail local */, 
+			       git_url=https://github.com/DanChaltiel/macro_sas.git /* repository git à charger */, 
+				   version=master /*version: release, tag, branch ou hash*/,
+				   local_folder=git_macro /* nom du dossier à créer pour contenir le clone*/);
 
 %let git_macro_path = &dir_path\&local_folder;
 filename git_path "&git_macro_path";
@@ -34,4 +34,13 @@ filename git_path "&git_macro_path";
 
 %include "&dir_path\&local_folder\_autoexec.sas";
 %put NOTE: Chargement des macros SBE version &git_macro_version du &git_macro_version_date;
+%mend;
+
+
+%macro install_github(dir_path /* chemin (absolu) vers l'espace de travail local */, 
+			          repo=DanChaltiel/macro_sas /* repository github (Username/Repo) à charger */, 
+				      version=master /*version: release, tag, branch ou hash*/,
+				      local_folder=git_macro /* nom du dossier à créer pour contenir le clone*/);
+%let git_url = https://github.com/&repo.git;
+%install_git(dir_path=&dir_path, git_url=&git_url, version=&version, local_folder=&local_folder);
 %mend;
