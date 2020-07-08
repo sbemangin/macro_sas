@@ -12,7 +12,7 @@
 */
 %install_git(dir_path=&dir_path);
 
-/*Appel d'une fonction test, définie sur github*/
+/*Appel d'une fonction test, définie sur github dans macro1.sas*/
 *https://github.com/DanChaltiel/macro_sas;
 %test_print;
 

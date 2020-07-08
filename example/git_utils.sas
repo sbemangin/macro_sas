@@ -33,7 +33,7 @@ filename git_path "&git_macro_path";
 %end; 
 
 %include "&dir_path\&local_folder\_autoexec.sas";
-%put NOTE: Chargement des macros SBE version &git_macro_version du &git_macro_version_date;
+%put NOTE: Chargement des macros depuis Git, version &git_macro_version du &git_macro_version_date;
 %mend;
 
 
