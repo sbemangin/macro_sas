@@ -8,8 +8,8 @@
 	%put ERROR: Macros SBE: la macrovariable "dir_path" doit être déclarée;
 %end; 
 
-%include "&dir_path\&local_folder\macro1.sas";
+%include "&dir_path\&local_folder\macros\macro1.sas";
 
-%include "&dir_path\&local_folder\beep.sas";
-%include "&dir_path\&local_folder\read_json.sas";
-%include "&dir_path\&local_folder\delete_all.sas";
+%include "&dir_path\&local_folder\macros\beep.sas";
+%include "&dir_path\&local_folder\macros\read_json.sas";
+%include "&dir_path\&local_folder\macros\delete_all.sas";
